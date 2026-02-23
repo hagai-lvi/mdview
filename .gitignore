@@ -1,0 +1,8 @@
+node_modules/
+*.log
+
+# Compiled binary (built on install)
+bin/mdview-window
+
+# Test artifacts
+test/*.tmp

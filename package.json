@@ -1,0 +1,32 @@
+{
+  "name": "mdview",
+  "version": "1.0.0",
+  "description": "Markdown viewer with live reload in native macOS window",
+  "type": "module",
+  "bin": {
+    "mdview": "./bin/mdview"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "build:viewer": "swiftc -o bin/mdview-window lib/viewer.swift -framework WebKit -framework AppKit",
+    "postinstall": "npm run build:viewer"
+  },
+  "os": ["darwin"],
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "chokidar": "^4.0.0",
+    "open": "^10.1.0",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "canvas": "^3.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hagail/mdview"
+  },
+  "keywords": ["markdown", "viewer", "preview", "macos", "live-reload", "claude-code"],
+  "license": "MIT"
+}

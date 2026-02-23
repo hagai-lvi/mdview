@@ -1,0 +1,20 @@
+{
+  "name": "mdview",
+  "version": "1.0.0",
+  "description": "Markdown viewer with live reload in native macOS window. Claude can open markdown files for user review.",
+  "author": "hagail",
+  "license": "MIT",
+  "platform": "darwin",
+  "skills": [
+    {
+      "name": "mdview",
+      "file": "skills/mdview/SKILL.md"
+    }
+  ],
+  "postInstall": "npm install && npm run build:viewer",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hagail/mdview"
+  },
+  "keywords": ["markdown", "viewer", "preview", "macos", "live-reload"]
+}
