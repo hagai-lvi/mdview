@@ -1,12 +1,17 @@
 {
   "name": "hagai-lvi",
-  "description": "Hagai's Claude Code plugins",
+  "owner": {
+    "name": "hagai-lvi"
+  },
   "plugins": [
     {
       "name": "mdview",
-      "version": "1.0.0",
+      "source": ".",
       "description": "Markdown viewer with live reload in native macOS window",
-      "path": "."
+      "version": "1.0.0",
+      "author": {
+        "name": "hagai-lvi"
+      }
     }
   ]
 }
