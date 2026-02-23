@@ -4,11 +4,5 @@
   "description": "Markdown viewer with live reload in native macOS window",
   "author": {
     "name": "hagai-lvi"
-  },
-  "skills": [
-    {
-      "name": "mdview",
-      "file": "skills/mdview/SKILL.md"
-    }
-  ]
+  }
 }
