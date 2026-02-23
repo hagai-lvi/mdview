@@ -43,21 +43,11 @@ Once installed, you can ask Claude to:
 
 Or Claude will proactively open markdown files for your review when creating or editing them.
 
-## Manual Usage (CLI)
-
-```bash
-# If installed via plugin
-~/.claude/plugins/cache/hagai-lvi/mdview/*/bin/mdview README.md
-
-# Or run directly from repo
-./bin/mdview README.md
-```
-
 ## Development
 
 ```bash
 git clone git@github.com:hagai-lvi/mdview.git
-cd mdview
+cd mdview/plugins/mdview
 npm install          # Installs deps + compiles Swift viewer
 npm test             # Run tests
 ./bin/mdview test.md # Test manually

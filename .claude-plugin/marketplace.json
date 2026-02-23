@@ -6,7 +6,7 @@
   "plugins": [
     {
       "name": "mdview",
-      "source": ".",
+      "source": "./plugins/mdview",
       "description": "Markdown viewer with live reload in native macOS window",
       "version": "1.0.0",
       "author": {
