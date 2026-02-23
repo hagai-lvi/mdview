@@ -20,13 +20,13 @@ A markdown viewer with live reload in a native macOS window. Designed for use wi
 ### 1. Add the marketplace
 
 ```bash
-claude plugins add-marketplace hagai-lvi --source github:hagai-lvi/mdview
+claude plugin marketplace add hagai-lvi/mdview
 ```
 
 ### 2. Install the plugin
 
 ```bash
-claude plugins install mdview@hagai-lvi
+claude plugin install mdview@hagai-lvi
 ```
 
 ### 3. Restart Claude Code
