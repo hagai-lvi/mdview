@@ -1,0 +1,12 @@
+{
+  "name": "hagai-lvi",
+  "description": "Hagai's Claude Code plugins",
+  "plugins": [
+    {
+      "name": "mdview",
+      "version": "1.0.0",
+      "description": "Markdown viewer with live reload in native macOS window",
+      "path": "."
+    }
+  ]
+}

@@ -1,81 +1,67 @@
 # mdview
 
-A local markdown viewer that renders markdown files in your browser with live preview, syntax highlighting, and Mermaid diagram support.
+A markdown viewer with live reload in a native macOS window. Designed for use with Claude Code.
 
 ## Features
 
-- **Live Preview**: Automatically renders markdown files in your browser
-- **Syntax Highlighting**: Code blocks are highlighted using highlight.js
-- **Mermaid Diagrams**: Full support for Mermaid diagrams (flowcharts, sequence diagrams, etc.)
-- **GitHub-Flavored Markdown**: Tables, task lists, strikethrough, and more
-- **Local Server**: Runs a lightweight local server for secure file access
-- **Auto-Opens Browser**: Automatically opens your default browser to view the file
+- **Live reload**: Changes to the file are instantly reflected in the viewer
+- **Native window**: Opens in a dedicated macOS window (not a browser tab)
+- **Full rendering**: Code syntax highlighting, mermaid diagrams, tables
+- **Dark mode**: Automatically matches system appearance
+
+## Requirements
+
+- macOS
+- Node.js 18+
+- Xcode Command Line Tools (for Swift compilation)
 
 ## Installation
 
+### 1. Add the marketplace
+
 ```bash
-# Clone or download the project
-cd mdview
-
-# Install dependencies
-npm install
-
-# Link globally for CLI access
-npm link
+claude plugins add-marketplace hagai-lvi --source github:hagai-lvi/mdview
 ```
 
-After linking, the `mdview` command will be available globally.
+### 2. Install the plugin
+
+```bash
+claude plugins install mdview@hagai-lvi
+```
+
+### 3. Restart Claude Code
+
+The `mdview` skill will now be available.
 
 ## Usage
 
-### Basic Usage
+Once installed, you can ask Claude to:
+
+- "Open the README"
+- "Show me docs/guide.md"
+- "Preview this markdown file"
+
+Or Claude will proactively open markdown files for your review when creating or editing them.
+
+## Manual Usage (CLI)
 
 ```bash
-# View a markdown file
-mdview README.md
+# If installed via plugin
+~/.claude/plugins/cache/hagai-lvi/mdview/*/bin/mdview README.md
 
-# View any markdown file
-mdview /path/to/your/document.md
-```
-
-### Direct Execution
-
-```bash
-# Run directly without global installation
+# Or run directly from repo
 ./bin/mdview README.md
 ```
 
-### Options
+## Development
 
 ```bash
-# Specify a custom port
-mdview --port 8080 README.md
+git clone git@github.com:hagai-lvi/mdview.git
+cd mdview
+npm install          # Installs deps + compiles Swift viewer
+npm test             # Run tests
+./bin/mdview test.md # Test manually
 ```
-
-## How It Works
-
-1. mdview starts a local HTTP server
-2. Opens your default browser to the server URL
-3. Renders the markdown file with full styling
-4. The server automatically shuts down when you're done
-
-## Supported Markdown Features
-
-- Headings (H1-H6)
-- Bold, italic, strikethrough text
-- Inline and block code with syntax highlighting
-- Tables (GitHub-flavored)
-- Ordered and unordered lists
-- Blockquotes
-- Links and images
-- Mermaid diagrams
-- Task lists
-
-## Dependencies
-
-- [marked](https://github.com/markedjs/marked) - Markdown parser
-- [highlight.js](https://highlightjs.org/) - Syntax highlighting
-- [open](https://github.com/sindresorhus/open) - Opens URLs in the browser
 
 ## License
 
